@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="кг">
+  <head>
+    <link rel="stylesheet" href="mystyles.css" />
+  </head>
+  <body>
+    <header class="menu"></header>
+
+    <div id="appcontent"></div>
+
+    <template id="producttemplateid">
+      <div class="product">
+        <picture>
+          <img class="product-image" />
+        </picture>
+        <div class="product-description"></div>
+        <div class="product-date"></div>
+        <button class="product-button-buy" type="button" onclick="show('block')">Купить</button>
+      </div>
+    </template>
+
+    <template id="sectiontemplateid">
+      <section class="section">
+        <h3></h3>
+        <div class="section-products"></div>
+      </section>
+    </template>
+
+    <div id="form">
+      <h1 class="form_title">Покупка:</h1>
+      <form action="market.html" name="buy">
+          <input type="number" placeholder="Количество" name="value" class="input">
+          <div class="input">
+            <input type="radio" name="color" class="radio" value="Красный"> Красный
+            <input type="radio" name="color" class="radio" value="Зеленый"> Зеленый
+            <input type="radio" name="color" class="radio" value="Синий"> Синий
+          </div>
+          <input type="text" placeholder="комментарий" name="komment" class="input">
+          <div class="btn">
+            <button onclick="getFormData()" class="btn_form"> Купить </button>
+            <button onclick="show('none')" class="btn_form"> Закрыть </button>
+          </div>
+      </form>
+    </div>
+
+    <footer class="footer"></footer>
+    <div class="btn-up btn-up_hide"></div>
+    <div class="btn-theme">T</div>
+
+    <script src="date.js"></script>
+    <script src="market.js"></script>
+    <script src="features.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
